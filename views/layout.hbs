@@ -4,110 +4,14 @@
 <div class="wrapper">
     <div class="container wrapper-grey wrapper-margin">
         {{> header}}
-        <nav class="navbar navbar-expand-lg">
-            <div class="container m-auto p-0">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                    </svg>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="#">[ Главная ]</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                [ Категории ]
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">[ Linux ]</a></li>
-                                <li><a class="dropdown-item" href="#">[ Windows ]</a></li>
-                                <li><a class="dropdown-item" href="#">[ Mac ]</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">[ О проекте ]</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">[ Обратная связь ]</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        {{> nav}}
         <div class="container" id="main-content">
             <div class="row">
-                <div class="col-xl-8 col-lg-12">
-                    <div id="posts">
-                        <div class="container m-0 p-0">
-                            <div class="row">
-                                <section class="post">
-                                    <h3 class="title__post"><a href="#" class="link">&#123; Заголовок второго поста и еще раз длинного заголовка поста }</a></h3>
-                                    <h4 class="subtitle__post">&#123; Категория: <a href="#" class="link">Категория 1</a>, Дата публикации:
-                                        <a href="#" class="link"><time datetime="2021-07-07">07.07.2021</time></a> }</h4>
-                                    <p class="text__post">
-                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                    </p>
-                                    <p class="tags__post">&#123; Теги: &#123;&#123; <a href="#" class="link">HTML</a> }}, &#123;&#123; <a
-                                            href="#" class="link">PHP</a> }}, &#123;&#123; <a href="#" class="link">Bootstrap</a> }} }</p>
-                                </section>
-                                <section class="post">
-                                    <h3 class="title__post"><a href="#" class="link">&#123; Заголовок первого поста }</a></h3>
-                                    <h4 class="subtitle__post">&#123; Категория: <a href="#" class="link">Категория 1</a>, Дата публикации:
-                                        <a href="#" class="link"><time datetime="2021-07-06">06.07.2021</time></a> }</h4>
-                                    <p class="text__post">
-                                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                    </p>
-                                    <p class="tags__post">&#123; Теги: &#123;&#123; <a href="#" class="link">HTML</a> }}, &#123;&#123; <a
-                                            href="#" class="link">PHP</a> }}, &#123;&#123; <a href="#" class="link">Bootstrap</a> }} }</p>
-                                </section>
-                                <nav aria-label="..." class="p-0 mt-4">
-                                    <ul class="pagination">
-                                        <li class="page-item disabled">
-                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item active" aria-current="page">
-                                            <a class="page-link" href="#">2</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">Next</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-none d-xl-block col-xl-4 p-0">
-                    <section id="category">
-                        <div class="title__category">Категории блога:</div>
-                        <ul class="items__category">
-                           <li class="item__category">&gt; [ <a href="#" class="link">HTML</a> ]</li>
-                           <li class="item__category">&gt; [ <a href="#" class="link">CSS</a>CSS ]</li>
-                           <li class="item__category">&gt; [ <a href="#" class="link">JS</a> ]</li>
-                           <li class="item__category">&gt; [ <a href="#" class="link">PHP</a> ]</li>
-                           <li class="item__category">&gt; [ <a href="#" class="link">MySQL</a> ]</li>
-                        </ul>
-                    </section>
-                </div>
+                {{{ body }}}
+                {{> sidebar}}
             </div>
         </div>
-        <footer class="container" id="main-footer">
-            <div class="row">
-                <small class="footer-line">&#123;&#123; &copy; 2021 Проект &nbsp;"<a href="#" class="footer-link">Микроблог</a>". }}</small>
-            </div>
-        </footer>
+        {{> footer}}
     </div>
 </div>
 
