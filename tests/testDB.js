@@ -1,7 +1,7 @@
 const config = require('config');
 const mongoose = require('mongoose');
 const chai = require('chai');
-const assert = chai.assert;
+const should = chai.should();
 const dbUrl = config.get('db');
 
 describe('DB', () => {
@@ -28,7 +28,7 @@ describe('DB', () => {
                 const categories = await Category.find();
                 const numCategories = categories.length;
 
-                assert.equal(numCategories, 5, 'Num of the categories is equal 5');
+                should.not.equal(numCategories, 0);
             }
         })
     })
