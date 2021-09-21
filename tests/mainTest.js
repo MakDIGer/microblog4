@@ -1,1 +1,1 @@
-const testCreateCategories = require('./testCreateCategories');
+const testCreateCategories = require('./testDB');
