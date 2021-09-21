@@ -1,13 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-const HomeController = require('./../app/controllers/HomeController'),
-      AboutController = require('./../app/controllers/AboutController'),
-      FeedbackController = require('./../app/controllers/FeedbackController');
+const MainController = require('./../app/controllers/MainController');
 
 /* GET home page. */
-router.get('/', HomeController);
-router.get('/about', AboutController);
-router.get('/feedback', FeedbackController);
+router.get('/', MainController.home);
+router.get('/about', MainController.about);
+router.get('/feedback', MainController.feedback);
 
 module.exports = router;
