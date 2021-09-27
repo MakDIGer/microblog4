@@ -96,7 +96,7 @@ async function main() {
             required: true,
             min: 4
         },
-        category: categorySchema,
+        category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
         date: {
             type: Date,
             default: Date.now
@@ -116,17 +116,22 @@ async function main() {
         }
     });
 
-    // const Category = conn.model('Category', categorySchema);
+    const Category = conn.model('Category', categorySchema);
     const Post = conn.model('Post', postSchema);
 
+    const category = new Category({
+        slug: 'category-101',
+        title: 'Категория 101'
+    })
+
+    await category.save();
+
     posts.forEach(async item => {
+
         const post = new Post({
             slug: item.slug,
             title: item.title,
-            category: {
-                slug: item.category.slug,
-                title: item.category.title
-            },
+            category: mongoose.Types.ObjectId('61523c8f69b55eb90cbbcaa6'),
             prevText: item.prevText,
             text: item.text,
             tags: item.tags
