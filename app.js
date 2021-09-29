@@ -1,4 +1,5 @@
 var createError = require('http-errors');
+var mongoose = require('mongoose');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -7,6 +8,11 @@ var hbs = require('hbs');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const keys = require('./config/db');
+
+mongoose.connect(keys.mongoURI)
+    .then(() => console.log('MongoDB has been connected!'))
+    .catch(error => console.log(error));
 
 var app = express();
 

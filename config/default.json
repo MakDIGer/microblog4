@@ -1,3 +1,0 @@
-{
-  "db": "mongodb://microblog:microblog@mongo:27017/microblog"
-}

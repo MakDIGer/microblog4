@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "./node_modules/mocha/bin/mocha ./tests/mainTest.js"
+    "test": "./node_modules/mocha/bin/mocha ./tests/testList.js"
   },
   "dependencies": {
-    "config": "^3.3.6",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",

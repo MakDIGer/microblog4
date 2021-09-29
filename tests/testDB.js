@@ -1,8 +1,7 @@
-const config = require('config');
+const keys = require('./../config/db.js');
 const mongoose = require('mongoose');
 const chai = require('chai');
 const should = chai.should();
-const dbUrl = config.get('db');
 
 describe('DB', () => {
     describe('has', () => {
@@ -11,7 +10,7 @@ describe('DB', () => {
 
             async function main() {
                 try {
-                    await mongoose.connect(dbUrl);
+                    await mongoose.connect(keys.mongoURI);
                 } catch (e) {
                     console.log(e);
                 }
