@@ -14,6 +14,7 @@ const postSchema = {
         unique: true
     },
     category: {
+        ref: 'categories',
         type: Schema.Types.ObjectId,
         required: true
     },
