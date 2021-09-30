@@ -1,13 +1,18 @@
-const HomePage = (req, res) => {
-    res.render('index');
+const Category = require('./../models/Category');
+
+const HomePage = async (req, res) => {
+    const categories = await Category.find().sort('slug').exec();
+    res.render('index', { categories });
 };
 
-const AboutPage = (req, res) => {
-    res.render('about');
+const AboutPage = async (req, res) => {
+    const categories = await Category.find().sort('slug').exec();
+    res.render('about', { categories });
 };
 
-const FeedbackPage = (req, res) => {
-    res.render('feedback');
+const FeedbackPage = async (req, res) => {
+    const categories = await Category.find().sort('slug').exec();
+    res.render('feedback', { categories });
 };
 
 module.exports.home = HomePage;
