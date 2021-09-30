@@ -29,5 +29,5 @@ const categories = [
 
 categories.forEach(async category => {
     const categoryDB = new Category(category);
-    categoryDB.save();
+    await categoryDB.save();
 });
