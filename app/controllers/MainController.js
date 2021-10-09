@@ -1,8 +1,11 @@
 const Category = require('./../models/Category');
+const Post = require('./../models/Post');
 
 const HomePage = async (req, res) => {
+    const posts = await Post.find().sort('slug').exec();
     const categories = await Category.find().sort('slug').exec();
-    res.render('index', { categories });
+
+    res.render('index', { categories, posts });
 };
 
 const AboutPage = async (req, res) => {
