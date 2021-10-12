@@ -4,8 +4,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-// var hbs = require('hbs');
 var expHbs = require('express-handlebars');
+var moment = require('moment');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -29,8 +29,10 @@ app.engine('hbs', expHbs({
   },
   partialsDir: path.join(__dirname, 'views/partials'),
   helpers: {
-    foo: function () { return 'FOO!'; },
-    bar: function () { return 'BAR!'; }
+    dateFormat: function (date) {
+      const res = moment().format('DD-MM-YYYY');
+      return res;
+    },
   }
 }));
 
